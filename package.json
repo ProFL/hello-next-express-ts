@@ -1,0 +1,41 @@
+{
+  "name": "hello-next-express-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch './**/*.ts' --ignore './node_modules/**/*' --exec 'ts-node' server.ts",
+    "build": "tsc -p ./tsconfig.server.json && next build",
+    "start": "NODE_ENV=production node bin/server.js"
+  },
+  "engines": {
+    "node": ">=10.15.0"
+  },
+  "keywords": [
+    "next",
+    "react",
+    "express",
+    "typescript"
+  ],
+  "author": "Pedro F Linhares",
+  "license": "MIT",
+  "dependencies": {
+    "@zeit/next-typescript": "^1.1.1",
+    "express": "^4.16.4",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-markdown": "^4.0.6",
+    "typescript": "^3.2.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/next": "^7.0.6",
+    "@types/node": "^10.12.18",
+    "@types/react": "^16.7.18",
+    "nodemon": "^1.18.9",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.0"
+  }
+}

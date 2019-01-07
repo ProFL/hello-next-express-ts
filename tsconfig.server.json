@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es2018",
+        "module": "commonjs",
+        "lib": [
+            "dom",
+            "es2018"
+        ],
+        "strict": true,
+        "sourceMap": true,
+        "sourceRoot": "./server",
+        "rootDir": "./server",
+        "outDir": "./bin"        
+    },
+    "include": [
+        "./server/*.ts",
+        "./server/**/*.ts"
+    ],
+    "exclude": [
+        "./node_modules"
+    ]
+}
