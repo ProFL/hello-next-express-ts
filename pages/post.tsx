@@ -1,8 +1,8 @@
 import fetch from 'isomorphic-unfetch';
 import Layout from '../components/Layout';
-import { Show } from '../interfaces/ShowsResponse';
+import { IShow } from '../interfaces/IShowsResponse';
 
-const Post = (props: { show: Show }) => (
+const Post = (props: { show: IShow }) => (
     <Layout>
         <h1>{props.show.name}</h1>
         <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
@@ -13,7 +13,7 @@ const Post = (props: { show: Show }) => (
 Post.getInitialProps = async function (context: { query: { id: string } }) {
     const { id } = context.query;
     const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
-    const show: Show = await res.json();
+    const show: IShow = await res.json();
 
     console.log(`Fetched show: ${show.name}`);
 
