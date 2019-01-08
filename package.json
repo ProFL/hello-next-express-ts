@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch './**/*.ts' --ignore './node_modules/**/*' --exec 'ts-node' server.ts",
+    "dev": "nodemon",
     "build": "tsc -p ./tsconfig.server.json && next build",
     "start": "NODE_ENV=production node bin/server.js"
   },
